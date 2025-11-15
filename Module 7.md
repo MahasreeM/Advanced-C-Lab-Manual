@@ -16,12 +16,51 @@ Else
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+struct eligible {
+    int age;
+    char name[50];
+};
+
+int main() {
+    int n;
+    printf("Enter number of persons: ");
+    scanf("%d", &n);
+
+    struct eligible e[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter name of person %d: ", i + 1);
+        scanf("%s", e[i].name);
+
+        printf("Enter age of %s: ", e[i].name);
+        scanf("%d", &e[i].age);
+    }
+
+    printf("\n--- Vaccine Eligibility Report ---\n");
+
+    for (int i = 0; i < n; i++) {
+        printf("\nName: %s", e[i].name);
+        printf("\nAge : %d", e[i].age);
+
+        if (e[i].age <= 6) {
+            printf("\nVaccine Eligibility: No\n");
+        } else {
+            printf("\nVaccine Eligibility: Yes\n");
+        }
+    }
+
+    return 0;
+}
+```
 
 
 Output:
 
-//paste your output here
+<img width="694" height="597" alt="image" src="https://github.com/user-attachments/assets/a5574016-e314-4b80-94cc-9248ad05e148" />
+
 
 
 Result:
@@ -44,7 +83,33 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+struct numbers {
+    int a;
+    int b;
+    int sum;
+};
+struct numbers add(struct numbers n) {
+    n.sum = n.a + n.b;   
+    return n;            
+}
+int main() {
+    struct numbers n, result;
+
+    printf("Enter value for a: ");
+    scanf("%d", &n.a);
+
+    printf("Enter value for b: ");
+    scanf("%d", &n.b);
+
+    result = add(n);   
+    printf("\nThe sum of %d and %d is: %d\n", result.a, result.b, result.sum);
+
+    return 0;
+}
+```
 
 
 
@@ -52,7 +117,7 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="527" height="330" alt="image" src="https://github.com/user-attachments/assets/1998c35f-1fdf-43bd-8e33-453af6e7f9b8" />
 
 
 
